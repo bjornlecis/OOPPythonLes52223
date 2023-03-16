@@ -13,6 +13,7 @@ class Werknemer:
         print("Het bedrijf telt:",Werknemer.aantalwn,"Werknemers")
 
 
+
 class Bediende(Werknemer):
 
     def __init__(self, naam, geslacht, maandloon, functie):
@@ -22,11 +23,11 @@ class Bediende(Werknemer):
         Werknemer.aantalwn += 1
 
     def __str__(self):
-        super().__str__()
+        print(super().__str__())
         return f"Functie:\t{self.functie}\nMaandloon:\t{self.maandloon}"
 
-    def toon_jaar_loon(self):
-        return self.maandloon * 12
+    def toon_jaarloon(self):
+        return f"{self.maandloon * 12} €"
 
 
 class Arbeider(Werknemer):
@@ -38,12 +39,10 @@ class Arbeider(Werknemer):
         Werknemer.aantalwn += 1
 
     def __str__(self):
-        super().__str__()
+        print(super().__str__())
         return f"Uurloon:\t{self.uurloon}\nAantal uur per week:\t{self.uurperweek}"
 
-    def toon_jaar_loon(self):
-        return self.uurloon * self.uurperweek * 4 * 13
+    def toon_jaarloon(self):
+        return f"{self.uurloon * self.uurperweek * 55} €"
 
 
-a1 = Arbeider("Bob", "M", 13, 38)
-a1.print_aantal_wn()

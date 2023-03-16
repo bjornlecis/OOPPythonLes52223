@@ -7,7 +7,7 @@ class App(tk.Tk):
         super().__init__()
         self.title('Tkinter StringVar')
         self.geometry("300x150")
-
+        self.configure(bg="Blue")
         self.getal1_var = tk.StringVar()
         self.getal2_var = tk.StringVar()
 
@@ -40,10 +40,18 @@ class App(tk.Tk):
         self.output_label = ttk.Label(self)
         self.output_label.grid(column=0, row=3, columnspan=3, **padding)
 
+
+
     def submit(self):
         som = int(self.getal1_var.get())+int(self.getal2_var.get())
         res = f"De uitkomst is: {str(som)}"
+        self.config(bg="Red")
         self.output_label.config(text=res)
+        self.output_label.configure(background="Green")
+        self.output_label.configure(foreground="Red",font=("Comic Sans",44))
+
+
+
 
 
 if __name__ == "__main__":

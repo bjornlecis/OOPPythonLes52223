@@ -5,8 +5,8 @@ from tkinter import ttk
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title('Tkinter StringVar')
-        self.geometry("300x80")
+        self.title('Programma naam')
+        self.geometry("400x400")
 
         self.voornaam_var = tk.StringVar()
 
@@ -18,7 +18,7 @@ class App(tk.Tk):
 
     def create_widgets(self):
 
-        padding = {'padx': 5, 'pady': 5}
+        padding = {'padx': 25, 'pady': 5}
         # label
         ttk.Label(self, text='Voornaam:').grid(column=0, row=0, **padding)
 
